@@ -1,0 +1,14 @@
+3. 🎓 Student Management System
+Manage students and their course enrollment.
+
+Features:
+
+CRUD for students
+
+CRUD for courses
+
+Assign/unassign students to courses
+
+Use token auth to protect admin routes
+
+
