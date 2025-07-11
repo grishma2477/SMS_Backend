@@ -4,5 +4,5 @@ import { success } from "../utils/ApiResponse.js";
 
 export const getAllStudent = asyncHandler(async (req,res) => {
     const allStudent = await Student.find();
-    res.status(200).json({success})
+    res.status(200).json(success("All students fetched successfully.",allStudent));
 })

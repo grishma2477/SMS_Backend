@@ -16,6 +16,11 @@ const port = Constant.PORT;
 // This allows us to access data from req.body in POST and PUT requests
 app.use(express.json());
 
+
+// Routes Import here
+import studentRoutes from "./routes/studentRoute.js"
+
+
 // Default route to test if the server is running
 // Visiting http://localhost:5000/ will return this message
 app.get("/", (req, res) => {
@@ -23,17 +28,14 @@ app.get("/", (req, res) => {
 });
 
 // ==============================
-// ✨ Routes Section (Add Later)
+// ✨ Routes Use here.
 // ==============================
 
+
+const API_VERSION = Constant.API_VERSION
 // ✅ Add routes for managing students
-// Example: app.use("/api/students", studentRoutes);
+app.use(`/api/v${API_VERSION}/students`, studentRoutes);
 
-// ✅ Add routes for managing courses
-// Example: app.use("/api/courses", courseRoutes);
-
-// ✅ Add routes for admin authentication (login, protected access)
-// Example: app.use("/api/auth", authRoutes);
 
 app.use(errorHandler);
 

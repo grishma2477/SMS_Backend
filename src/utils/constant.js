@@ -5,5 +5,6 @@ dotenv.config();
 export const Constant = {
     PORT:process.env.PORT,
     COURSE_MODEL:"Course",
-    STUDENT_MODEL:"Student"
+    STUDENT_MODEL:"Student",
+    API_VERSION:1
 }
