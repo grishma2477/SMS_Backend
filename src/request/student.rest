@@ -8,3 +8,37 @@ Authorization: Bearer {{TOKEN}}
 Content-Type: application/json
 
 ###
+
+#GET Single Student By Id
+
+GET {{BASE_URL}}/6871b34a4f8c3737e2d44426
+Authorization: Bearer {{TOKEN}}
+Content-Type: application/json
+
+###
+
+#Register Student By Id
+
+POST {{BASE_URL}}/register
+Authorization: Bearer {{TOKEN}}
+Content-Type: application/json
+
+{
+    "name": "Sandip",
+    "email": "abc@gmail.com",
+    "password": "1234",
+    "phone": "123456"
+}
+###
+
+# Login Student
+
+POST {{BASE_URL}}/login
+Authorization: Bearer {{TOKEN}}
+Content-Type: application/json
+
+{
+    "email": "abc@gmail.com",
+    "password": "1234"
+}
+###

@@ -4,6 +4,8 @@
 import express from "express";
 import { Constant } from "./utils/constant.js";
 import { errorHandler } from "./middleware/errorHandler.js";
+import { dbConnection } from "./config/db.js";
+
 
 
 // Create an instance of the Express application
@@ -16,9 +18,12 @@ const port = Constant.PORT;
 // This allows us to access data from req.body in POST and PUT requests
 app.use(express.json());
 
+dbConnection();
+
 
 // Routes Import here
 import studentRoutes from "./routes/studentRoute.js"
+
 
 
 // Default route to test if the server is running
